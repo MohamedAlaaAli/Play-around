@@ -141,5 +141,5 @@ def fib(n):
 
 ```
 
-$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(logn),\space\color{blue}Space\space\color{blue}O(1)}$$
 
