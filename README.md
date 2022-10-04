@@ -88,7 +88,7 @@ $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\co
 
 
 <h3>I think we can do better than the first naive solution,</h3>
-<h3 style="color: red; opacity:0.90">so what about dynamic programming approach ?
+<h3 style="color: red; opacity:0.90">so what about dynamic programming approach ?</h3>
 
 $${\color{blue}Dyn\color{black}amic\space\color{blue}prog\color{black}ramming}$$
 ```python
