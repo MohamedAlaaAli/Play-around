@@ -87,5 +87,20 @@ def fib(n: int,first = 0,second = 1):
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
 
 
+<h3>I think we can do better than the first naive solution,</h3>
+<h3 style="color: red; opacity:0.90">so what about dynamic programming approach ?
 
+$${\color{blue}Dyn\color{black}amic\space\color{blue}prog\color{black}ramming}$$
+```python
+"""memo is a dictionary mapping each fibonacci number to its order or index"""
+def fib1(n: int, memo={0:0,1:1,2:1}):
+	#if the order is included in the memo find it from there
+    if n in memo.keys():
+        return memo[n]
+	# if not find the nth fibonacci then add it to the memo
+    else:
+        memo[n] = fib1(n-1, memo) + fib1(n-2, memo)
+    return memo[n]
+```
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
 
