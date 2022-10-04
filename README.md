@@ -35,7 +35,7 @@ F<sub>n-1</sub> is the (n-1)th term
 
 F<sub>n-2</sub> is the (n-2)th term
 
-From the equation, we can summarize the definition as, the next number in the sequence, is the sum of the previous two numbers present in the sequence, starting from 0 and 1. Let us create a table to find the next term of the Fibonacci sequence, using the formula.<p>[Link to source](https://byjus.com/maths/fibonacci-numbers/ "Link to source")<br><br>
+From the equation, we can summarize the definition as, the next number in the sequence, is the sum of the previous two numbers present in the sequence, starting from 0 and 1. Let us create a table to find the next term of the Fibonacci sequence, using the formula.<p>[Link to source](https://byjus.com/maths/fibonacci-numbers/ "Link to source")<br><br><br>
 
 | F<sub>n-1</sub>  | F<sub>n-2</sub>  |  F<sub>n</sub> |
 | :---        |    :----:   |          ---: |
