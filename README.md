@@ -46,3 +46,4 @@ From the equation, we can summarize the definition as, the next number in the se
 | 3 | 5   | 8  |
 
 
+proceeding with the ***Code Blocks***
