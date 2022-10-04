@@ -17,7 +17,7 @@ Explain the algorithm of each solution mentioning the space and time complexity.
   <p>What is <strong>Fibonacci</strong> Number?
 A Fibonacci number is a series of numbers in which each Fibonacci number is obtained by adding the two preceding numbers. It means that the next number in the series is the addition of two previous numbers. Let the first two numbers in the series be taken as 0 and 1. By adding 0 and 1, we get the third number as 1. Then by adding the second and the third number (i.e) 1 and 1, we get the fourth number as 2, and similarly, the process goes on. Thus, we get the Fibonacci series as 0, 1, 1, 2, 3, 5, 8, ……. Hence, the obtained series is called the Fibonacci number series.
 
-We can also obtain the Fibonacci numbers from the pascal’s triangle as shown in the below figure <p>
+We can also obtain the Fibonacci numbers from the pascal’s triangle as shown in the below figure </p>
 
 [![](https://cdn1.byjus.com/wp-content/uploads/2021/03/Fibonacci-Numbers-1.png)](hhttps://cdn1.byjus.com/wp-content/uploads/2021/03/Fibonacci-Numbers-1.pngttp://)
 
@@ -103,3 +103,43 @@ def fib1(n: int, memo={0:0,1:1,2:1}):
     return memo[n]
 ```
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+	
+another loop based solution :
+```python
+def fib_loop(n:int):
+    n1, n2 = 0, 1
+    next = 0
+	#start from 2 end in n+1 exclusive
+    for i in range(2,n+1):
+        n1, n2 = n2, n1+n2
+
+    return n2
+```
+
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+
+## Are we done right now ? Well, We have not thaught about mathmatics yet !
+the golden rectange and the golden ratio :smiling_imp: :
+
+
+[![](https://th.bing.com/th/id/R.841f98741ca81e159478f0a2286f476e?rik=Od9IP28emNml4g&riu=http%3a%2f%2f4.bp.blogspot.com%2f-TTWog5TwhHg%2fU-SlTLvdxuI%2fAAAAAAAAN9s%2fzh0TSSCU86M%2fs1600%2fPicture2.png&ehk=r0YLCIW3R5dtxg6inv%2fKDc1wAK2IK%2b8A%2bjtywBCP%2bko%3d&risl=&pid=ImgRaw&r=0)](https://th.bing.com/th/id/R.841f98741ca81e159478f0a2286f476e?rik=Od9IP28emNml4g&riu=http%3a%2f%2f4.bp.blogspot.com%2f-TTWog5TwhHg%2fU-SlTLvdxuI%2fAAAAAAAAN9s%2fzh0TSSCU86M%2fs1600%2fPicture2.png&ehk=r0YLCIW3R5dtxg6inv%2fKDc1wAK2IK%2b8A%2bjtywBCP%2bko%3d&risl=&pid=ImgRaw&r=0)
+[Reference Link](https://www.mathsisfun.com/numbers/fibonacci-sequence.html "Reference Link")
+
+When we take **any two successive** (one after the other) *Fibonacci* Numbers, their ratio is very close to the Golden Ratio **"φ" which is approximately 1.618034...**
+# Formula :
+### F<sub>n</sub> = (((√5 + 1)/2) ^ n) / √5F<sub>n</sub> = (((√5 + 1)/2) ^ n) / √5
+
+***Mathmatical approach*** :smirk:
+
+$${\color{blue}Python\space\color{blue}implementation}$$
+```python
+def fib(n):
+	#calculate the golden ratio phi
+    phi = (1 + math.sqrt(5)) / 2
+	#use the formula for nth fibonacci number
+    return round(pow(phi, n) / math.sqrt(5))
+
+```
+
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(logn),\space\color{blue}Space\space\color{blue}O(1)}$$
+
