@@ -46,7 +46,7 @@ From the equation, we can summarize the definition as, the next number in the se
 | 3 | 5   | 8  |
 
 
-<br><br>proceeding with the ***Code Blocks***
+<br><br>proceeding with the ***Code Blocks***<br>
   The first naive solution to this problem is ***this recursive approach***
 
 $${\color{blue}Python\space\color{blue}implementation}$$
