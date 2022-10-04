@@ -118,3 +118,13 @@ def fib_loop(n:int):
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
 
+## Are we done right now ? Well, We have not thaught about mathmatics yet !
+the golden rectange and the golden ratio :smiling_imp: :
+
+
+[![](https://th.bing.com/th/id/R.841f98741ca81e159478f0a2286f476e?rik=Od9IP28emNml4g&riu=http%3a%2f%2f4.bp.blogspot.com%2f-TTWog5TwhHg%2fU-SlTLvdxuI%2fAAAAAAAAN9s%2fzh0TSSCU86M%2fs1600%2fPicture2.png&ehk=r0YLCIW3R5dtxg6inv%2fKDc1wAK2IK%2b8A%2bjtywBCP%2bko%3d&risl=&pid=ImgRaw&r=0)](https://th.bing.com/th/id/R.841f98741ca81e159478f0a2286f476e?rik=Od9IP28emNml4g&riu=http%3a%2f%2f4.bp.blogspot.com%2f-TTWog5TwhHg%2fU-SlTLvdxuI%2fAAAAAAAAN9s%2fzh0TSSCU86M%2fs1600%2fPicture2.png&ehk=r0YLCIW3R5dtxg6inv%2fKDc1wAK2IK%2b8A%2bjtywBCP%2bko%3d&risl=&pid=ImgRaw&r=0)
+[Reference Link](https://www.mathsisfun.com/numbers/fibonacci-sequence.html "Reference Link")
+
+When we take **any two successive** (one after the other) *Fibonacci* Numbers, their ratio is very close to the Golden Ratio **"φ" which is approximately 1.618034...**
+# Formula :
+### F<sub>n</sub> = (((√5 + 1)/2) ^ n) / √5F<sub>n</sub> = (((√5 + 1)/2) ^ n) / √5
