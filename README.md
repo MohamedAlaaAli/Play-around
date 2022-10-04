@@ -86,8 +86,6 @@ def fib(n: int,first = 0,second = 1):
 ```
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
 
-<br>The second ***naive*** solution will be using ****loops****
 
-$${\color{blue}Python\space\color{blue}implementation}$$
 
 
