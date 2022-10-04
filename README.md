@@ -128,3 +128,18 @@ the golden rectange and the golden ratio :smiling_imp: :
 When we take **any two successive** (one after the other) *Fibonacci* Numbers, their ratio is very close to the Golden Ratio **"φ" which is approximately 1.618034...**
 # Formula :
 ### F<sub>n</sub> = (((√5 + 1)/2) ^ n) / √5F<sub>n</sub> = (((√5 + 1)/2) ^ n) / √5
+
+	***Mathmatical approach*** :smirk:
+
+$${\color{blue}Python\space\color{blue}implementation}$$
+```python
+def fib(n):
+	#calculate the golden ratio phi
+    phi = (1 + math.sqrt(5)) / 2
+	#use the formula for nth fibonacci number
+    return round(pow(phi, n) / math.sqrt(5))
+
+```
+
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+
