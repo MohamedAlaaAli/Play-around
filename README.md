@@ -144,7 +144,7 @@ def fib(n):
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(logn),\space\color{blue}Space\space\color{blue}O(1)}$$
 
 
-Using **Linear algebra**** :[link1](https://math.stackexchange.com/questions/61997/proof-of-this-result-related-to-fibonacci-numbers-beginpmatrix11-10-end "Reference Link") [link2](https://www.programmersought.com/article/92534124972/ "https://www.programmersought.com/article/92534124972/")
+# Using **Linear algebra**** :[link1](https://math.stackexchange.com/questions/61997/proof-of-this-result-related-to-fibonacci-numbers-beginpmatrix11-10-end "Reference Link") [link2](https://www.programmersought.com/article/92534124972/ "https://www.programmersought.com/article/92534124972/")
 
 [![](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)
 
