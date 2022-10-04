@@ -1,1 +1,1 @@
-$${\color{red}Fibonacci sequence problem}$$
+{\color{red}Fibonacci sequence problem}
