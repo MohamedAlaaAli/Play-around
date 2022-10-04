@@ -1,6 +1,9 @@
-# Fibonacci sequence problem
-## Submitted by:
 
-<span style="color:green;font-weight:700;font-size:20px">
-    markdown color font styles
-</span>
+<html>
+<body style="background-color:powderblue;">
+
+<h1>Fibonacci sequence problem</h1>
+<h2> Submitted by<//h2>
+
+</body>
+</html>
