@@ -17,7 +17,7 @@ Explain the algorithm of each solution mentioning the space and time complexity.
   <p>What is <strong>Fibonacci</strong> Number?
 A Fibonacci number is a series of numbers in which each Fibonacci number is obtained by adding the two preceding numbers. It means that the next number in the series is the addition of two previous numbers. Let the first two numbers in the series be taken as 0 and 1. By adding 0 and 1, we get the third number as 1. Then by adding the second and the third number (i.e) 1 and 1, we get the fourth number as 2, and similarly, the process goes on. Thus, we get the Fibonacci series as 0, 1, 1, 2, 3, 5, 8, ……. Hence, the obtained series is called the Fibonacci number series.
 
-We can also obtain the Fibonacci numbers from the pascal’s triangle as shown in the below figure <p>
+We can also obtain the Fibonacci numbers from the pascal’s triangle as shown in the below figure </p>
 
 [![](https://cdn1.byjus.com/wp-content/uploads/2021/03/Fibonacci-Numbers-1.png)](hhttps://cdn1.byjus.com/wp-content/uploads/2021/03/Fibonacci-Numbers-1.pngttp://)
 
@@ -35,7 +35,7 @@ F<sub>n-1</sub> is the (n-1)th term
 
 F<sub>n-2</sub> is the (n-2)th term
 
-From the equation, we can summarize the definition as, the next number in the sequence, is the sum of the previous two numbers present in the sequence, starting from 0 and 1. Let us create a table to find the next term of the Fibonacci sequence, using the formula.<p><br>
+From the equation, we can summarize the definition as, the next number in the sequence, is the sum of the previous two numbers present in the sequence, starting from 0 and 1. Let us create a table to find the next term of the Fibonacci sequence, using the formula.<p>[Link to source](https://byjus.com/maths/fibonacci-numbers/ "Link to source")<br>
 
 | F<sub>n-1</sub>  | F<sub>n-2</sub>  |  F<sub>n</sub> |
 | :---        |    :----:   |          ---: |
@@ -45,4 +45,101 @@ From the equation, we can summarize the definition as, the next number in the se
 | 2 | 3   | 5   |
 | 3 | 5   | 8  |
 
+
+<br><br><h1>Next is the ***Algorithms***</h1><br>
+  The first naive solution to this problem is ***this recursive approach***
+
+$${\color{blue}Python\space\color{blue}implementation}$$
+```python
+def fib1(n: int):
+	#base case
+    if n<=1:
+        return n
+	#Notice here 2 recursive calls
+    return fib1(n-1) + fib1(n-2)
+```
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+
+
+
+
+
+
+
+This is ***a good*** solution to this problem using ***recusion with a recursive  approach***
+
+$${\color{blue}Python\space\color{blue}implementation}$$
+```python
+def fib(n: int,first = 0,second = 1):
+	#base cases
+	#The first element
+    if n-1 == 0:
+        return second
+	#the zeroth element
+    elif n-1 == -1:
+        return first
+	#anything else
+    else:
+        next = first + second
+        first = second
+        return fib(n-1, first, next)
+```
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+
+
+<h3>I think we can do better than the first naive solution,</h3>
+<h3 style="color: red; opacity:0.90">so what about dynamic programming approach ?</h3>
+
+$${\color{blue}Dyn\color{black}amic\space\color{blue}prog\color{black}ramming}$$
+```python
+"""memo is a dictionary mapping each fibonacci number to its order or index"""
+def fib1(n: int, memo={0:0,1:1,2:1}):
+	#if the order is included in the memo find it from there
+    if n in memo.keys():
+        return memo[n]
+	# if not find the nth fibonacci then add it to the memo
+    else:
+        memo[n] = fib1(n-1, memo) + fib1(n-2, memo)
+    return memo[n]
+```
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+	
+another loop based solution :
+```python
+def fib_loop(n:int):
+    n1, n2 = 0, 1
+    next = 0
+	#start from 2 end in n+1 exclusive
+    for i in range(2,n+1):
+        n1, n2 = n2, n1+n2
+
+    return n2
+```
+
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+
+## Are we done right now ? Well, We have not thaught about mathmatics yet !
+the golden rectange and the golden ratio :smiling_imp: :
+
+
+[![](https://th.bing.com/th/id/R.841f98741ca81e159478f0a2286f476e?rik=Od9IP28emNml4g&riu=http%3a%2f%2f4.bp.blogspot.com%2f-TTWog5TwhHg%2fU-SlTLvdxuI%2fAAAAAAAAN9s%2fzh0TSSCU86M%2fs1600%2fPicture2.png&ehk=r0YLCIW3R5dtxg6inv%2fKDc1wAK2IK%2b8A%2bjtywBCP%2bko%3d&risl=&pid=ImgRaw&r=0)](https://th.bing.com/th/id/R.841f98741ca81e159478f0a2286f476e?rik=Od9IP28emNml4g&riu=http%3a%2f%2f4.bp.blogspot.com%2f-TTWog5TwhHg%2fU-SlTLvdxuI%2fAAAAAAAAN9s%2fzh0TSSCU86M%2fs1600%2fPicture2.png&ehk=r0YLCIW3R5dtxg6inv%2fKDc1wAK2IK%2b8A%2bjtywBCP%2bko%3d&risl=&pid=ImgRaw&r=0)
+[Reference Link](https://www.mathsisfun.com/numbers/fibonacci-sequence.html "Reference Link")
+
+When we take **any two successive** (one after the other) *Fibonacci* Numbers, their ratio is very close to the Golden Ratio **"φ" which is approximately 1.618034...**
+# Formula :
+### F<sub>n</sub> = (((√5 + 1)/2) ^ n) / √5F<sub>n</sub> = (((√5 + 1)/2) ^ n) / √5
+
+***Mathmatical approach*** :smirk:
+
+$${\color{blue}Python\space\color{blue}implementation}$$
+```python
+def fib(n):
+	#calculate the golden ratio phi
+    phi = (1 + math.sqrt(5)) / 2
+	#use the formula for nth fibonacci number
+    return round(pow(phi, n) / math.sqrt(5))
+
+```
+
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(logn),\space\color{blue}Space\space\color{blue}O(1)}$$
 
