@@ -117,4 +117,4 @@ def fib_loop(n:int):
 ```
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
-:smiling_imp:
+
