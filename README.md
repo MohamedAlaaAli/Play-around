@@ -66,7 +66,7 @@ $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\co
 
 
 
-This ***a good*** solution to this problem is using ***recusion with a recursive  approach***
+This is ***a good*** solution to this problem using ***recusion with a recursive  approach***
 
 $${\color{blue}Python\space\color{blue}implementation}$$
 ```python
