@@ -129,7 +129,7 @@ When we take **any two successive** (one after the other) *Fibonacci* Numbers, t
 # Formula :
 ### F<sub>n</sub> = (((√5 + 1)/2) ^ n) / √5F<sub>n</sub> = (((√5 + 1)/2) ^ n) / √5
 
-	***Mathmatical approach*** :smirk:
+***Mathmatical approach*** :smirk:
 
 $${\color{blue}Python\space\color{blue}implementation}$$
 ```python
