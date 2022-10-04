@@ -103,3 +103,17 @@ def fib1(n: int, memo={0:0,1:1,2:1}):
     return memo[n]
 ```
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+	
+another loop based solution :
+```python
+def fib_loop(n:int):
+    n1, n2 = 0, 1
+    next = 0
+	#start from 2 end in n+1 exclusive
+    for i in range(2,n+1):
+        n1, n2 = n2, n1+n2
+
+    return n2
+```
+
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
