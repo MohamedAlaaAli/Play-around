@@ -143,3 +143,24 @@ def fib(n):
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(logn),\space\color{blue}Space\space\color{blue}O(1)}$$
 
+
+Using **Linear algebra**** :[link1](https://math.stackexchange.com/questions/61997/proof-of-this-result-related-to-fibonacci-numbers-beginpmatrix11-10-end "Reference Link") [link2](https://www.programmersought.com/article/92534124972/ "https://www.programmersought.com/article/92534124972/")
+
+[![](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)
+
+$${\color{blue}Diagonalization\space\color{blue}of\space\color{blue}matrix,\space\color{blue}Recurrence\space\color{blue}relation}$$
+```python
+def fib_matrix(n: int):
+	#array initialized
+    F = np.array([[1, 1],
+                 [1, 0]])
+    if n == 0:
+        return 1
+	#Array diagonalization
+    result = np.matmul(F, F)
+    for i in range(3,n+1):
+        result = np.matmul(result, F)
+    return result[0][0]
+```
+
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
