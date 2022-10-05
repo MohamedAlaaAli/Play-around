@@ -166,7 +166,7 @@ $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\co
 	
 | Algorithm  |  time complexity | space complexity  |
 | ------------ | ------------ | ------------ |
-|  naive recursive approach | O( N^2 )  | O( N )  |
+|  naive recursive approach | O( 2^N )  | O( N )  |
 |  modified recursive approach | O(N)  | O(N)  |
 |  Dynamic programming | O(N)  | O(N)  |
 | Loop based solution  | O(N)  | O(N)  |
