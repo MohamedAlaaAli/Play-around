@@ -47,7 +47,7 @@ From the equation, we can summarize the definition as, the next number in the se
 
 
 <br><br><h1>Next is the ***Algorithms***</h1><br>
-  The first naive solution to this problem is ***this recursive approach***
+  1.The first naive solution to this problem is ***this recursive approach***
 
 $${\color{blue}Python\space\color{blue}implementation}$$
 ```python
@@ -65,7 +65,7 @@ $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(2^{\{n}}),\s
 
 
 
-This is ***a good*** solution to this problem using ***recursive  approach***
+2.This is ***a good*** solution to this problem using ***recursive  approach***
 
 $${\color{blue}Python\space\color{blue}implementation}$$
 ```python
@@ -86,7 +86,7 @@ def fib(n: int,first = 0,second = 1):
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
 
 
-<h3>I think we can do better than the first naive solution,</h3>
+<h3>3.I think we can do better than the first naive solution,</h3>
 <h3 style="color: red; opacity:0.90">so what about dynamic programming approach ?</h3>
 
 $${\color{blue}Dyn\color{black}amic\space\color{blue}prog\color{black}ramming}$$
@@ -103,7 +103,7 @@ def fib1(n: int, memo={0:0,1:1,2:1}):
 ```
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
 	
-another loop based solution :
+4.another loop based solution :
 ```python
 def fib_loop(n:int):
     n1, n2 = 0, 1
@@ -117,7 +117,7 @@ def fib_loop(n:int):
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
 
-## Are we done right now ? Well, We have not thaught about mathmatics yet !
+## 5.Are we done right now ? Well, We have not thaught about mathmatics yet !
 the golden rectange and the golden ratio :smiling_imp: :
 
 
@@ -143,7 +143,7 @@ def fib(n):
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(logn),\space\color{blue}Space\space\color{blue}O(1)}$$
 
 
-# Using **Linear algebra**** :[link1](https://math.stackexchange.com/questions/61997/proof-of-this-result-related-to-fibonacci-numbers-beginpmatrix11-10-end "Reference Link") [link2](https://www.programmersought.com/article/92534124972/ "https://www.programmersought.com/article/92534124972/")
+# 6.Using **Linear algebra**** :[link1](https://math.stackexchange.com/questions/61997/proof-of-this-result-related-to-fibonacci-numbers-beginpmatrix11-10-end "Reference Link") [link2](https://www.programmersought.com/article/92534124972/ "https://www.programmersought.com/article/92534124972/")
 
 [![](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)
 
