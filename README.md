@@ -163,3 +163,12 @@ def fib_matrix(n: int):
 ```
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
+	
+| Algorithm  |  time complexity | space complexity  |
+| ------------ | ------------ | ------------ |
+|  naive recursive approach | O( N^2 )  | O( N )  |
+|  modified recursive approach | O(N)  | O(N)  |
+|  Dynamic programming | O(N)  | O(N)  |
+| Loop based solution  | O(N)  | O(N)  |
+|  Golden ratio  | O(log(N))  |  O(1) |
+|Linear Algebra| O(N) | O(1)|
