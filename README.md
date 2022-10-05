@@ -65,7 +65,7 @@ $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(2^{\{n}}),\s
 
 
 
-This is ***a good*** solution to this problem using *** recursive  approach***
+This is ***a good*** solution to this problem using ***recursive  approach***
 
 $${\color{blue}Python\space\color{blue}implementation}$$
 ```python
