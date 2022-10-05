@@ -58,7 +58,7 @@ def fib1(n: int):
 	#Notice here 2 recursive calls
     return fib1(n-1) + fib1(n-2)
 ```
-$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(2<sup>n</sup),\space\color{blue}Space\space\color{blue}O(n)}$$
 
 
 
