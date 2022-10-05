@@ -115,7 +115,7 @@ def fib_loop(n:int):
     return n2
 ```
 
-$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
+$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
 
 ## Are we done right now ? Well, We have not thaught about mathmatics yet !
 the golden rectange and the golden ratio :smiling_imp: :
