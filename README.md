@@ -254,6 +254,7 @@ def fib(n) :
     return f[n]
 ```
 ### C++ solution
+```cpp
 
 // C++ Program to find n'th fibonacci Number in
 // with O(Log n) arithmetic operations
@@ -287,6 +288,7 @@ int fib(int n)
  
     return f[n];
 }
+```
 	
 | Algorithm  |  time complexity | space complexity  |
 | ------------ | ------------ | ------------ |
