@@ -204,7 +204,7 @@ $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(logn),\space
 
 [![](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)
 
-$${\color{blue}Diagonalization\space\color{blue}of\space\color{blue}matrix,\space\color{blue}Recurrence\space\color{blue}relation}$$
+$${\color{blue}Diagonalization\space\color{blue}of\space\color{blue}matrix,\space\color{blue}Power\space\color{blue}of\space\color{blue}matrix$$
 ```python
 def fib_matrix(n: int):
 	#array initialized
