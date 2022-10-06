@@ -59,10 +59,22 @@ def fib1(n: int):
 
 # C++ solution
 ```cpp
-def fibonacci(n):
-    if n <= 1:
-        return n
-    return fibonacci(n-1) + fibonacci(n-2)
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int fib(int n)
+{
+    if (n <= 1)
+        return n;
+    return fib(n - 1) + fib(n - 2);
+}
+ 
+int main()
+{
+    int n = 9;
+    cout << fib(n);
+    getchar();
+    return 0;
 ```
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(2^{\{n}}),\space\color{blue}Space\space\color{blue}O(n)}$$
