@@ -180,7 +180,6 @@ When we take **any two successive** (one after the other) *Fibonacci* Numbers, t
 
 ***Mathmatical approach*** :smirk:
 
-$${\color{blue}Python\space\color{blue}implementation}$$
 ```python
 def fib(n):
 	#calculate the golden ratio phi
