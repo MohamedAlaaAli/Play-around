@@ -47,7 +47,6 @@ From the equation, we can summarize the definition as, the next number in the se
 # Next is the ***Algorithms***
   1.The first naive solution to this problem is ***this recursive approach***
 
-$${\color{blue}Python\space\color{blue}implementation}$$
 ```python
 def fib1(n: int):
 	#base case
@@ -77,7 +76,6 @@ int main()
     return 0;
 ```
 
-$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(2^{\{n}}),\space\color{blue}Space\space\color{blue}O(n)}$$
 
 
 
@@ -86,7 +84,6 @@ $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(2^{\{n}}),\s
 
 2.This is ***a good*** solution to this problem using ***recursive  approach***
 
-$${\color{blue}Python\space\color{blue}implementation}$$
 ```python
 def fib(n: int,first = 0,second = 1):
 	#base cases
@@ -102,13 +99,11 @@ def fib(n: int,first = 0,second = 1):
         first = second
         return fib(n-1, first, next)
 ```
-$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
 
 
 ### 3.I think we can do better than the first naive solution,
 ### so what about dynamic programming approach ?
 
-$${\color{blue}Dyn\color{black}amic\space\color{blue}prog\color{black}ramming}$$
 ```python
 """memo is a dictionary mapping each fibonacci number to its order or index"""
 def fib1(n: int, memo={0:0,1:1,2:1}):
@@ -158,7 +153,6 @@ int fib(int n)
 }
 ```
 
-$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
 	
 4.another ***loop based*** solution :
 ```python
@@ -172,7 +166,6 @@ def fib_loop(n:int):
     return n2
 ```
 
-$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
 
 ## 5.Are we done right now ? Well, We have not thaught about mathmatics yet !
 the golden rectange and the golden ratio :smiling_imp: :
@@ -197,14 +190,12 @@ def fib(n):
 
 ```
 
-$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(logn),\space\color{blue}Space\space\color{blue}O(1)}$$
 
 
 # 6.Using **Linear algebra**** :[link1](https://math.stackexchange.com/questions/61997/proof-of-this-result-related-to-fibonacci-numbers-beginpmatrix11-10-end "Reference Link") [link2](https://www.programmersought.com/article/92534124972/ "https://www.programmersought.com/article/92534124972/")
 
 [![](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)
 
-$${\color{blue}Diagonalization\space\color{blue}of\space\color{blue}matrix,\space\color{blue}Power\space\color{blue}of\space\color{blue}matrix}$$
 ```python
 def fib_matrix(n: int):
 	#array initialized
@@ -285,7 +276,6 @@ int main()
 }
 ```
 
-$${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
 
 # 7.Using recurrence relations :
 ```python
