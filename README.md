@@ -159,7 +159,7 @@ def fib_matrix(n: int):
     result = np.matmul(F, F)
     for i in range(3,n+1):
         result = np.matmul(result, F)
-    return result[0][0]
+    return result[0][1]
 ```
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
