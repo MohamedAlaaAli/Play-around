@@ -163,6 +163,43 @@ def fib_matrix(n: int):
 ```
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
+
+#7.Using recurrence relations :
+```python
+# Python3 Program to find n'th fibonacci Number in
+# with O(Log n) arithmetic operations
+MAX = 1000
+ 
+# Create an array for memoization
+f = [0] * MAX
+ 
+# Returns n'th fibonacci number using table f[]
+def fib(n) :
+    # Base cases
+    if (n == 0) :
+        return 0
+    if (n == 1 or n == 2) :
+        f[n] = 1
+        return (f[n])
+ 
+    # If fib(n) is already computed
+    if (f[n]) :
+        return f[n]
+ 
+    if( n & 1) :
+        k = (n + 1) // 2
+    else :
+        k = n // 2
+ 
+    # Applying above formula [Note value n&1 is 1
+    # if n is odd, else 0.
+    if((n & 1) ) :
+        f[n] = (fib(k) * fib(k) + fib(k-1) * fib(k-1))
+    else :
+        f[n] = (2*fib(k-1) + fib(k))*fib(k)
+ 
+    return f[n]
+```
 	
 | Algorithm  |  time complexity | space complexity  |
 | ------------ | ------------ | ------------ |
@@ -172,3 +209,4 @@ $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\co
 | Loop based solution  | O(N)  | O(N)  |
 |  Golden ratio  | O(log(N))  |  O(1) |
 |Linear Algebra| O(N) | O(1)|
+| recurence | O(log(N))|O(log(N))|
