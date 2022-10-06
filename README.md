@@ -164,7 +164,7 @@ def fib_matrix(n: int):
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
 
-#7.Using recurrence relations :
+# 7.Using recurrence relations :
 ```python
 # Python3 Program to find n'th fibonacci Number in
 # with O(Log n) arithmetic operations
