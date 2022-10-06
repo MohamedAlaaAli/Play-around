@@ -236,7 +236,7 @@ void power(int F[2][2], int n);
  
 int fib(int n)
 {
-    int F[2][2] = { { 1, 1 }, { 1, 0 } };
+    int F[2][2] = [ ( 1, 1 ), ( 1, 0 ) ];
      
     if (n == 0)
         return 0;
@@ -269,7 +269,7 @@ void power(int F[2][2], int n)
     int M[2][2] = { { 1, 1 }, { 1, 0 } };
      
     // n - 1 times multiply the
-    // matrix to {{1,0},{0,1}}
+    // matrix to [(1,0),(0,1)]
     for(i = 2; i <= n; i++)
         multiply(F, M);
 }
