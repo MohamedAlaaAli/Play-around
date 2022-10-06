@@ -56,6 +56,27 @@ def fib1(n: int):
 	#Notice here 2 recursive calls
     return fib1(n-1) + fib1(n-2)
 ```
+
+# C++ solution
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int fib(int n)
+{
+    if (n <= 1)
+        return n;
+    return fib(n - 1) + fib(n - 2);
+}
+ 
+int main()
+{
+    int n = 9;
+    cout << fib(n);
+    getchar();
+    return 0;
+```
+
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(2^{\{n}}),\space\color{blue}Space\space\color{blue}O(n)}$$
 
 
@@ -99,6 +120,44 @@ def fib1(n: int, memo={0:0,1:1,2:1}):
         memo[n] = fib1(n-1, memo) + fib1(n-2, memo)
     return memo[n]
 ```
+### C++ solution
+```cpp
+
+// C++ program for Fibonacci Series 
+// using Dynamic Programming
+#include<bits/stdc++.h>
+using namespace std;
+ 
+class GFG{
+     
+public:
+int fib(int n)
+{
+     
+    // Declare an array to store
+    // Fibonacci numbers.
+    // 1 extra to handle
+    // case, n = 0
+    int f[n + 2];
+    int i;
+ 
+    // 0th and 1st number of the
+    // series are 0 and 1
+    f[0] = 0;
+    f[1] = 1;
+ 
+    for(i = 2; i <= n; i++)
+    {
+         
+       //Add the previous 2 numbers
+       // in the series and store it
+       f[i] = f[i - 1] + f[i - 2];
+    }
+    return f[n];
+    }
+}
+```
+
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(n)}$$
 	
 4.another ***loop based*** solution :
@@ -145,7 +204,7 @@ $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(logn),\space
 
 [![](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)](https://th.bing.com/th/id/R.bc3d3581246e7c3616087576441aa157?rik=O%2bZmnTeVBiu%2btA&pid=ImgRaw&r=0)
 
-$${\color{blue}Diagonalization\space\color{blue}of\space\color{blue}matrix,\space\color{blue}Recurrence\space\color{blue}relation}$$
+$${\color{blue}Diagonalization\space\color{blue}of\space\color{blue}matrix,\space\color{blue}Power\space\color{blue}of\space\color{blue}matrix}$$
 ```python
 def fib_matrix(n: int):
 	#array initialized
@@ -154,6 +213,76 @@ def fib_matrix(n: int):
     
 	#Array diagonalization
     return np.linalg.matrix_power(F,n)[0][1]
+```
+
+### C++ solution
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+ 
+// Helper function that multiplies 2
+// matrices F and M of size 2*2, and
+// puts the multiplication result
+// back to F[][]
+void multiply(int F[2][2], int M[2][2]);
+ 
+// Helper function that calculates F[][]
+// raise to the power n and puts the
+// result in F[][]
+// Note that this function is designed
+// only for fib() and won't work as
+// general power function
+void power(int F[2][2], int n);
+ 
+int fib(int n)
+{
+    int F[2][2] = [ ( 1, 1 ), ( 1, 0 ) ];
+     
+    if (n == 0)
+        return 0;
+         
+    power(F, n - 1);
+     
+    return F[0][0];
+}
+ 
+void multiply(int F[2][2], int M[2][2])
+{
+    int x = F[0][0] * M[0][0] +
+            F[0][1] * M[1][0];
+    int y = F[0][0] * M[0][1] +
+            F[0][1] * M[1][1];
+    int z = F[1][0] * M[0][0] +
+            F[1][1] * M[1][0];
+    int w = F[1][0] * M[0][1] +
+            F[1][1] * M[1][1];
+     
+    F[0][0] = x;
+    F[0][1] = y;
+    F[1][0] = z;
+    F[1][1] = w;
+}
+ 
+void power(int F[2][2], int n)
+{
+    int i;
+    int M[2][2] = { { 1, 1 }, { 1, 0 } };
+     
+    // n - 1 times multiply the
+    // matrix to [(1,0),(0,1)]
+    for(i = 2; i <= n; i++)
+        multiply(F, M);
+}
+ 
+// Driver code
+int main()
+{
+    int n = 9;
+     
+    cout << " " <<  fib(n);
+     
+    return 0;
+}
 ```
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
@@ -193,6 +322,42 @@ def fib(n) :
         f[n] = (2*fib(k-1) + fib(k))*fib(k)
  
     return f[n]
+```
+### C++ solution
+```cpp
+
+// C++ Program to find n'th fibonacci Number in
+// with O(Log n) arithmetic operations
+#include <bits/stdc++.h>
+using namespace std;
+ 
+const int MAX = 1000;
+ 
+// Create an array for memoization
+int f[MAX] = {0};
+ 
+// Returns n'th fibonacci number using table f[]
+int fib(int n)
+{
+    // Base cases
+    if (n == 0)
+        return 0;
+    if (n == 1 || n == 2)
+        return (f[n] = 1);
+ 
+    // If fib(n) is already computed
+    if (f[n])
+        return f[n];
+ 
+    int k = (n & 1)? (n+1)/2 : n/2;
+ 
+    // Applying above formula [Note value n&1 is 1
+    // if n is odd, else 0.
+    f[n] = (n & 1)? (fib(k)*fib(k) + fib(k-1)*fib(k-1))
+           : (2*fib(k-1) + fib(k))*fib(k);
+ 
+    return f[n];
+}
 ```
 	
 | Algorithm  |  time complexity | space complexity  |
