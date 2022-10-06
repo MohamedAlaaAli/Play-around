@@ -153,8 +153,7 @@ def fib_matrix(n: int):
 	#array initialized
     F = np.array([[1, 1],
                  [1, 0]])
-    if n == 0:
-        return 1
+    
 	#Array diagonalization
     return np.linalg.matrix_power(F,n)[0][1]
 ```
