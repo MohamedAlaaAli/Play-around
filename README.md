@@ -156,10 +156,7 @@ def fib_matrix(n: int):
     if n == 0:
         return 1
 	#Array diagonalization
-    result = np.matmul(F, F)
-    for i in range(3,n+1):
-        result = np.matmul(result, F)
-    return result[0][1]
+    return np.linalg.matrix_power(F,n)[0][1]
 ```
 
 $${\color{blue}Complexity:\space\color{blue}time\space\color{blue}O(n),\space\color{blue}Space\space\color{blue}O(1)}$$
